@@ -3,7 +3,7 @@ import { PostagemService } from '../service/postagem.service';
 import { Postagem } from '../entities/postagem.entity';
 
 
-@Controller('postagens')
+@Controller('/postagens')
 export class PostagemController {
   constructor(private readonly postagemService: PostagemService) {}
 
