@@ -8,7 +8,7 @@ import { Type } from 'class-transformer';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { Postagem } from './postagem/entities/postagem.entity';
-import { PostagemModule } from './postagem/entities/postagem.module';
+import { PostagemModule } from './postagem/service/postagem.module';
 
 
 
