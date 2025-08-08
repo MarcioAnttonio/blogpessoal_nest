@@ -1,5 +1,4 @@
 import { AppService } from './app.service';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Type } from 'class-transformer';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';

@@ -1,6 +1,7 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put } from "@nestjs/common";
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put, UseGuards } from "@nestjs/common";
 import { UsuarioService } from "../services/usuario.service";
 import { Usuario } from "../entities/usuario";
+import { AuthGuard } from "@nestjs/passport";
 
 
 @Controller("/usuarios")
@@ -8,6 +9,8 @@ export class UsuarioController{
 
     constructor(private readonly usuarioService: UsuarioService){ }
 
+    @UseGuards(AuthGuard('jwt'))
+    @HttpCode(HttpStatus.OK)
     @Get('/all')
     @HttpCode(HttpStatus.OK)
     findAll(): Promise<Usuario[]>{
