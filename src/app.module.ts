@@ -8,7 +8,7 @@ import { Tema } from './tema/entities/tema.entity';
 import { TemaModule } from './tema/tema.module';
 import { AuthModule } from './auth/auth.module';
 import { UsuarioModule } from './usuario/usuario.module';
-import { Usuario } from './usuario/entities/usuario';
+import { Usuario } from './usuario/entities/usuario.entity';
 
 
 @Module({
@@ -22,6 +22,7 @@ import { Usuario } from './usuario/entities/usuario';
       database: 'db_blogpessoal',
       entities: [Postagem, Tema, Usuario],
       synchronize: true,
+      logging: true,
     }),
     PostagemModule,
     TemaModule,

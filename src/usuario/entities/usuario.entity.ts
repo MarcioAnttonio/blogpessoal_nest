@@ -1,7 +1,6 @@
 import { IsEmail, IsNotEmpty, MinLength } from "class-validator"
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm"
 import { Postagem } from "../../postagem/entities/postagem.entity"
-import { UsuarioController } from "../controller/usuario.controller"
 
 @Entity({name: "tb_usuarios"})
 export class Usuario {
